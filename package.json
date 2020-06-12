@@ -1,0 +1,17 @@
+{
+  "name": "app.js",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./myapp/bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.4",
+    "save": "^2.4.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 #{Name}
+  p Drink of Choice: <button type="button" class="btn btn-outline-primary">#{drink}</button>
+  p Bar: <button type="button" class="btn btn-outline-secondary">#{Bar} @ #{Location}</button> 
+  p #{Radio}
+  p #{attachments, url} 
+    img(src="https://dl.airtable.com/.attachmentThumbnails/704807584382660333d7531ff72c5afe/a5760ac8", 
+        alt="Me", 
+        width="240",
+        height="320")
+  
+  p #{attachments}
+  p #{Check}
+  p #{Notes}
+  p Recipes: <button type="button" class="btn btn-outline-primary">#{Recipe1}</button>
+      <button type="button" class="btn btn-outline-primary">#{Recipe2}</button>
+      <button type="button" class="btn btn-outline-primary">#{Recipe3}</button>
+  p #{Phone}
+  p #{Options}
+  p #{Dollars}
+  p #{Email}
