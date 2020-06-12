@@ -36,7 +36,37 @@ async function getBartender(id){
     console.dir(bartender);
     return bartender;
 }
+ 
+// async function getDrinkByName(name){
+//     let drink=null
+//     drinksBase('Drinks').select({
+//         // Selecting the first 3 records in Recipe Gallery:
+//         maxRecords: 10,
+//         view: "Recipe Gallery"
+//     }).eachPage(function page(records, fetchNextPage) {
+//         // This function (`page`) will get called for each page of records.
+        
 
+//         records.forEach(function(record) {
+//             const drinkName = record.get('RecipeName');
+//             if(drinkName == name){
+//                 drink = record;
+//             }
+//             console.log('Retrieved', record.get('RecipeName'));
+//         });
+//         const drinkId = drink.get('id');
+//         // To fetch the next page of records, call `fetchNextPage`.
+//         // If there are more records, `page` will get called again.
+//         // If there are no more records, `done` will get called.
+//         fetchNextPage();
+//     done(drinkId)
+//     }, function done(err) {
+//         if (err) { console.error(err); return; }
+//         return getDrink(drinkId)
+
+
+//     });
+// }
 module.exports ={
     getBartender, getDrink, listDrinks,
 }

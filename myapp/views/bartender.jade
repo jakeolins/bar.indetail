@@ -2,7 +2,9 @@ extends layout
 
 block content
   h1 #{Name}
-  p Drink of Choice: <button type="button" class="btn btn-outline-primary">#{drink}</button>
+
+  p Drink of Choice: <a href="/drinks/#{drinkId}"><button type="button" class="btn btn-outline-primary">#{drink}</button></a>
+
   p Bar: <button type="button" class="btn btn-outline-secondary">#{Bar} @ #{Location}</button> 
   p #{Radio}
   p #{attachments, url} 
