@@ -1,8 +1,8 @@
 extends layout
 
 block content
-    p #{RecipeName}
-    name #{: 'Drinks'}
-    find #{: [Function]}
-    list #{: [Function]}
-    forEach #{: [Function]}
+    table
+        each drink in records
+            tr
+                td #{drink.fields.RecipeName}
+                td #{drink.fields.RecipeName}

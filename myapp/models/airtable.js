@@ -14,10 +14,7 @@ async function getDrink(id){
 
 async function listDrinks(){
     console.log("listDrinks is called in airtable");
-    const menu = await drinksBase('Drinks').select({
-        maxRecords: 10,
-        view: "Recipe Gallery"
-    });
+    const menu = await drinksBase('Drinks').select().firstPage();
     console.log("listDrinks responds from airtable");
     console.dir(menu);
     return menu;

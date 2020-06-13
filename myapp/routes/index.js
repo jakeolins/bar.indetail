@@ -17,12 +17,13 @@ router.get('/drinks/:id', async function(req, res, next) {
   //res.render('index', { title: 'Express Yourself' });
 });
 
-router.get('/menu/:', async function(req, res, next) {
+router.get('/menu', async function(req, res, next) {
   console.log("listDrinks is called")
   const menu = await drinkController.listDrinks(req.params);
   //res.send(menu)
   console.dir(menu)
-  res.render("menu",menu.fields)
+  res.render("menu",{records:menu})
+  //res.json(menu)
   //res.render('index', { title: 'Express Yourself' });
 });
 

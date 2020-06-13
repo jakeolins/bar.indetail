@@ -7,11 +7,10 @@ block content
 
   p Bar: <button type="button" class="btn btn-outline-secondary">#{Bar} @ #{Location}</button> 
   p #{Radio}
-  p #{attachments, url} 
-    img(src="https://dl.airtable.com/.attachmentThumbnails/704807584382660333d7531ff72c5afe/a5760ac8", 
-        alt="Me", 
-        width="240",
-        height="320")
+  img(src="#{Attachments[0].url}", 
+    alt="Me", 
+    width="240",
+    height="320")
   
   p #{attachments}
   p #{Check}
