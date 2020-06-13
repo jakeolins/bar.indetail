@@ -5,9 +5,7 @@ block content
     table
         each drink in records
             tr
-                td <a href="/drinks/#{drinkId}"><button type="button" class="btn btn-outline-primary">#{drink.fields.RecipeName}</button></a>
-                td #{drink.fields.NameReadable}
-                td #{drink.fields.Bartender}
+                td <a href="/drinks/#{drink.fields.drinkId}"><button type="button" class="btn btn-outline-primary">#{drink.fields.RecipeName}</button></a>
 
 
 

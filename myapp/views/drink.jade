@@ -4,11 +4,16 @@ block content
   h1 #{RecipeName}
   p #{attachments, url} 
     
-    img(src="https://dl.airtable.com/.attachmentThumbnails/bdab1bced54701bace9f8fbd5cac1a5b/371f0d41", 
+    //img(src="https://dl.airtable.com/.attachmentThumbnails/bdab1bced54701bace9f8fbd5cac1a5b/371f0d41", 
         alt="Me", 
         width="240",
         height="320")
-    
+
+  img(src="#{Attachments[0,1].url}"
+    width="240",
+    height="320"
+    )
+
   p Ingredients: #{RecipeReadable}
   p Preparation: #{Preparation}
-  p Contributed By: <button type="button" class="btn btn-outline-primary">#{Bartender}</button>
+  p Contributed By: <a href="/bartender/#{bartenderId}"><button type="button" class="btn btn-outline-primary">#{NameReadable}</button></a>
