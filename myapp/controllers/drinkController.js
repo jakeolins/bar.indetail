@@ -18,7 +18,14 @@ async function getBartender(id){
     console.dir(bartender.fields);
     return bartender;
 }
+
+async function listBartenders(){
+    console.log("listBartenders is called in drinkController");
+    const staff = await Airtable.listBartenders();
+    return staff;
+}
+
 module.exports ={
-    getBartender, getDrink, listDrinks,
+    getBartender, getDrink, listDrinks, listBartenders,
 }
 

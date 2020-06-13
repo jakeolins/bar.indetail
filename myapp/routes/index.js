@@ -36,4 +36,14 @@ router.get('/bartender/:id', async function(req, res, next) {
   //res.render('index', { title: 'Express Yourself' });
 });
 
+router.get('/staff', async function(req, res, next) {
+  console.log("listBartenders is called")
+  const staff = await drinkController.listBartenders(req.params);
+  //res.send(staff)
+  console.dir(staff)
+  res.render("staff",{records:staff})
+  //res.json(menu)
+  //res.render('index', { title: 'Express Yourself' });
+});
+
 module.exports = router;

@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1 Staff
+    table
+        each bartender in records
+            tr
+                td <a href="/bartender/#{bartender.fields.bartenderId}"><button type="button" class="btn btn-outline-primary">#{bartender.fields.Name}</button></a>

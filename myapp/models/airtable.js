@@ -23,7 +23,7 @@ async function listDrinks(){
 async function getBartender(id){
     console.log("getBartender is called in airtable");
     try{
-        var bartender = await bartenderBase('Bartenders').find(id);
+        var bartender = await drinksBase('Bartenders').find(id);
         // throw Error("whoops!")
     }
     catch (error){
@@ -33,7 +33,15 @@ async function getBartender(id){
     console.dir(bartender);
     return bartender;
 }
- 
+
+async function listBartenders(){
+    console.log("listBartenders is called in airtable");
+    const staff = await drinksBase('Bartenders').select().firstPage();
+    console.log("listDrinks responds from airtable");
+    console.dir(staff);
+    return staff;
+}
+
 // async function getDrinkByName(name){
 //     let drink=null
 //     drinksBase('Drinks').select({
@@ -65,5 +73,5 @@ async function getBartender(id){
 //     });
 // }
 module.exports ={
-    getBartender, getDrink, listDrinks,
+    getBartender, getDrink, listDrinks, listBartenders,
 }

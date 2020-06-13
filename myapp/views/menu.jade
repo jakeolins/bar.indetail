@@ -1,8 +1,14 @@
 extends layout
 
 block content
+    h1 Menu
     table
         each drink in records
             tr
-                td #{drink.fields.RecipeName}
-                td #{drink.fields.RecipeName}
+                td <a href="/drinks/#{drinkId}"><button type="button" class="btn btn-outline-primary">#{drink.fields.RecipeName}</button></a>
+                td #{drink.fields.NameReadable}
+                td #{drink.fields.Bartender}
+
+
+
+            
