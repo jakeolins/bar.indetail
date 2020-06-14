@@ -1,6 +1,8 @@
 extends layout
 
 block content
+  p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
+  
   h1 #{RecipeName}
   p #{attachments, url} 
     
@@ -9,7 +11,7 @@ block content
         width="240",
         height="320")
 
-  img(src="#{Attachments[0,1].url}"
+  img(src="#{Attachments[0].url}"
     width="240",
     height="320"
     )

@@ -1,24 +1,32 @@
 extends layout
 
 block content
-  h1 #{Name}
+  p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
+  
+  h1 Bartender: #{Name}
 
-  p Drink of Choice: <a href="/drinks/#{drinkId}"><button type="button" class="btn btn-outline-primary">#{drink}</button></a>
+  p The inDetail Take: #{inDetailTake} 
 
-  p Bar: <button type="button" class="btn btn-outline-secondary">#{BarReadable} @ #{Location}</button> 
-  p #{Radio}
+  p The Drink: <a href="/drinks/#{FavoriteDrinkId}"><button type="button" class="btn btn-outline-primary">#{FavoriteDrinkReadable}</button></a>
+
   img(src="#{Attachments[0].url}", 
     alt="Me", 
     width="240",
     height="320")
   
-  p #{attachments}
-  p #{Check}
-  p #{Notes}
-  p Recipes: <button type="button" class="btn btn-outline-primary">#{Recipe1}</button>
+  p Bar: #{BarReadable} in #{Location}
+
+  p About me: #{WhoAreYou}
+
+  p Favorite Story: #{FavoriteStory}
+
+  p Recipes: 
+
+  //p #{Notes}
+  //p Recipes: <button type="button" class="btn btn-outline-primary">#{Recipe1}</button>
       <button type="button" class="btn btn-outline-primary">#{Recipe2}</button>
       <button type="button" class="btn btn-outline-primary">#{Recipe3}</button>
-  p #{Phone}
-  p #{Options}
-  p #{Dollars}
-  p #{Email}
+  //p #{Phone}
+  //p #{Options}
+  //p #{Dollars}
+  //p #{Email}

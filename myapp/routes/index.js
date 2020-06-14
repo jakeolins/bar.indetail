@@ -46,4 +46,8 @@ router.get('/staff', async function(req, res, next) {
   //res.render('index', { title: 'Express Yourself' });
 });
 
+router.get('/home', function(req, res, next) {
+  res.render('home', { title: 'Home' });
+});
+
 module.exports = router;
