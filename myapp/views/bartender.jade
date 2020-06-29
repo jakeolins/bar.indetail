@@ -5,22 +5,32 @@ block content
   
   h1 Bartender: #{Name}
 
-  p The inDetail Take: #{inDetailTake} 
-
-  p The Drink: <a href="/drinks/#{FavoriteDrinkId}"><button type="button" class="btn btn-outline-primary">#{FavoriteDrinkReadable}</button></a>
+  p <strong>The Drink:</strong> <a href="/drinks/#{FavoriteDrinkId}"><button type="button" class="btn btn-outline-primary">#{FavoriteDrinkReadable}</button></a>   
 
   img(src="#{Attachments[0].url}", 
     alt="Me", 
     width="240",
     height="320")
   
-  p Bar: #{BarReadable} in #{Location}
+  p <strong>The inDetail Take:</strong> #{inDetailTake}
+  
+  
 
-  p About me: #{WhoAreYou}
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/#{Video2}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-  p Favorite Story: #{FavoriteStory}
+  p <strong>About me:</strong> #{WhoAreYou}
 
-  p Recipes: 
+  p <strong>Bar:</strong> #{BarReadable} in #{Location}
+  
+  p <strong>Favorite Story:</strong> #{FavoriteStory}
+
+  //p <strong>Recipes:</strong> #{DrinkSubmissionsReadable} 
+
+  //<a href="/drinks/#{FavoriteDrinkId}"><button type="button" class="btn btn-outline-primary">#{FavoriteDrinkReadable}</button></a>
+  
+  //<a href="/drinks/#{DrinkSubmissionsID[0]}"><button type="button" class="btn btn-outline-primary">Can't figure out how to show the drink name</button></a>
+
+
 
   //p #{Notes}
   //p Recipes: <button type="button" class="btn btn-outline-primary">#{Recipe1}</button>

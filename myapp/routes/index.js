@@ -50,4 +50,8 @@ router.get('/home', function(req, res, next) {
   res.render('home', { title: 'Home' });
 });
 
+router.get('/apply', function(req, res, next) {
+  res.render('apply', { title: 'Apply' });
+});
+
 module.exports = router;
