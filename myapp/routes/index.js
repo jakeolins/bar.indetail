@@ -18,11 +18,13 @@ router.get('/drinks/:id', async function(req, res, next) {
 });
 
 router.get('/menu', async function(req, res, next) {
+  console.log(new Date().getTime())
   console.log("listDrinks is called")
   const menu = await drinkController.listDrinks(req.params);
   //res.send(menu)
   console.dir(menu)
   res.render("menu",{records:menu})
+  console.log(new Date().getTime())
   //res.json(menu)
   //res.render('index', { title: 'Express Yourself' });
 });
@@ -51,6 +53,12 @@ router.get('/home', function(req, res, next) {
 });
 
 router.get('/apply', function(req, res, next) {
+  res.render('apply', { title: 'Apply' });
+});
+
+router.post('/apply', async function(request, res, next) {
+  console.dir(request.body)
+  await drinkController.submitApplication(request.body.applicantName, request.body.applicantBar, request.body.applicantDrink, request.body.applicantStory)
   res.render('apply', { title: 'Apply' });
 });
 

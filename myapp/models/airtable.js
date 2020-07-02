@@ -14,7 +14,9 @@ async function getDrink(id){
 
 async function listDrinks(){
     console.log("listDrinks is called in airtable");
+    console.log(new Date().getTime())
     const menu = await drinksBase('Drinks').select().firstPage();
+    console.log(new Date().getTime())
     console.log("listDrinks responds from airtable");
     console.dir(menu);
     return menu;
@@ -41,6 +43,21 @@ async function listBartenders(){
     console.dir(staff);
     return staff;
 }
+
+async function submitApplication(applicantName, applicantBar, applicantDrink, applicantStory){
+    const result = await drinksBase('Applications').create([
+        {
+          "fields": {
+              Name: applicantName,
+              Bar: applicantBar,
+              Drink: applicantDrink,
+              Story: applicantStory,
+          }
+        },
+      ]);
+    return result 
+}
+
 
 // async function getDrinkByName(name){
 //     let drink=null
@@ -73,5 +90,5 @@ async function listBartenders(){
 //     });
 // }
 module.exports ={
-    getBartender, getDrink, listDrinks, listBartenders,
+    getBartender, getDrink, listDrinks, listBartenders, submitApplication,
 }

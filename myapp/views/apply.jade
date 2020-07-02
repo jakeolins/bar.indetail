@@ -9,3 +9,26 @@ block content
     p From there we'll start connecting you with viewers that may be interested in hiring you for events, parties, Zoom lessons and more.
     p Email us at jakeolins@outlook.com with any other type of inquiry
 
+    
+    form(action="/apply" method="post")
+        label Name:
+        br
+        input(type="text" id="applicantName" name="applicantName" placeholder="Yung Savage")
+        br
+        label Bar:
+        br
+        input(type="text" id="applicantBar" name="applicantBar" placeholder="Hole in the Wall")
+        br
+        label Drink:
+        br
+        input(type="text" id="applicantDrink" name="applicantDrink" placeholder="Tequila Freedom")
+        br
+        label Story:
+        br
+        input(type="text" id="applicantStory" name="applicantStory" placeholder="Once upon a time")
+        br
+
+        input(type="submit" value="Submit")
+        br
+
+
