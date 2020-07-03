@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
+    //p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
     
     h1 Apply
     p Apply to be a member of the Staff at The Bar in Detail
@@ -11,23 +11,27 @@ block content
 
     
     form(action="/apply" method="post")
+        br
         label Name:
         br
         input(type="text" id="applicantName" name="applicantName" placeholder="Yung Savage")
+        br
         br
         label Bar:
         br
         input(type="text" id="applicantBar" name="applicantBar" placeholder="Hole in the Wall")
         br
+        br
         label Drink:
         br
         input(type="text" id="applicantDrink" name="applicantDrink" placeholder="Tequila Freedom")
+        br
         br
         label Story:
         br
         input(type="text" id="applicantStory" name="applicantStory" placeholder="Once upon a time")
         br
-
+        br
         input(type="submit" value="Submit")
         br
 
