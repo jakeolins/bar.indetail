@@ -4,11 +4,27 @@ block content
     //p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
     
     h1 Menu
-    table
-        each drink in records
-            tr
-                td <a href="/drinks/#{drink.fields.drinkId}"><button type="button" class="btn btn-outline-primary">#{drink.fields.RecipeName}</button></a>
+    div(class="container")
+        //div(class="row justify-content-around space-evenly")
+        div(class="row justify-content-around")
+                each drink in records
 
+                    ul(class="list-group list-group-horizontal-sm")                  
+                    
+                        li(class="list-group-item")
+                        
+                            container(class="scrolling-wrapper") 
+                            
+                                div(class="card-lg"
+                                    style="width: 9rem;")
+                                    br
+                                    p(class="justify-content-center")
+                                        a(href="/drinks/#{drink.fields.drinkId}" class="btn btn-outline-dark btn-block stretched-link") #{drink.fields.RecipeName}
+                                    br
+                                    img(src="#{drink.fields.Attachments[0].url}",
+                                    class="card-img-top",
+                                    alt="...")
 
+                            
 
-            
+                                

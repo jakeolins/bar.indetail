@@ -3,8 +3,26 @@ extends layout
 block content
     //p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
     
+    br
     h1 Staff
-    table
-        each bartender in records
-            tr
-                td <a href="/bartender/#{bartender.fields.bartenderId}"><button type="button" class="btn btn-outline-primary">#{bartender.fields.Name}</button></a>
+    div(class="container")
+        div(class="row justify-content-around")
+            each bartender in records
+
+                                                      
+                ul(class="list-group list-group-horizontal-sm")
+                    li(class="list-group-item")
+                        div(class="scrolling-wrapper") 
+                            //div(class="col-sm-6 mb-4")
+                            div(class="card-lg"
+                                style="width: 18rem;")
+                                img(src="#{bartender.fields.Attachments[0].url}",
+                                class="card-img-top",
+                                alt="...")
+                                div(class="card-body row justify-content-start")
+                                    a(href="/bartender/#{bartender.fields.bartenderId}" class="btn btn-outline-dark btn-block stretched-link") #{bartender.fields.Name}
+                                    //h5(class="card-title") #{bartender.fields.Name}
+                                    br
+                                    p(class="card-text") #{bartender.fields.inDetailTake}    
+                        
+                
