@@ -3,36 +3,72 @@ extends layout
 block content
     //p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
     
-    h1 Apply
-    p Apply to be a member of the Staff at The Bar in Detail
-    p Submit your application <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAcoQWIpUNUpPRTVVNkRQTk5DSEVGSDQyQ1Q3RVlHWC4u"><button type="button" class="btn btn-outline-primary">here</button></a> <strong>to earn $50</strong> and be featured here on The Bar In Detail, on our IG, YouTube and TikTok pages.
-    p From there we'll start connecting you with viewers that may be interested in hiring you for events, parties, Zoom lessons and more.
-    p Email us at jakeolins@outlook.com with any other type of inquiry
+    div(class="container-sm")
 
-    
-    form(action="/apply" method="post")
         br
-        label Name:
+        h3 Apply 
         br
-        input(type="text" id="applicantName" name="applicantName" placeholder="Yung Savage")
+        p To be a member of the Staff at The Bar in Detail submit your application below <strong>to earn $50</strong> and be featured here on The Bar In Detail, on our IG, YouTube and TikTok pages.
         br
-        br
-        label Bar:
-        br
-        input(type="text" id="applicantBar" name="applicantBar" placeholder="Hole in the Wall")
-        br
-        br
-        label Drink:
-        br
-        input(type="text" id="applicantDrink" name="applicantDrink" placeholder="Tequila Freedom")
-        br
-        br
-        label Story:
-        br
-        input(type="text" id="applicantStory" name="applicantStory" placeholder="Once upon a time")
-        br
-        br
-        input(type="submit" value="Submit")
-        br
+        //<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAcoQWIpUNUpPRTVVNkRQTk5DSEVGSDQyQ1
+        
+        form(action="/apply" method="post")
+            //ul(class="list-unstyled")
+                li(class="form-group")
+            div(class="form-group")
+                label What's your name?
+                input(type="text" class="form-control" id="Name" name="Name" placeholder="First, Last & alias if you have one ;-)")
+                    
 
+                //li(class="form-group")
+            div(class="form-group")
+                label Who are you?
+                br
+                input(type="text" class="form-control" id="WhoAreYou" name="WhoAreYou" placeholder="Help us get to know you... Your personality, experience, specialties, passions, etc.")
+            
+                //li(class="media")
+            div(class="form-group")
+                label Where do/ did you work?
+                br
+                input(type="text" class="form-control" id="Bar" name="Bar" placeholder="Name of the bar and location please")
+            
+                //li(class="media")
+            div(class="form-group")
+                label What drink would you like to share?
+                br
+                input(type="text" class="form-control" id="Drink" name="Drink" placeholder="Name of drink you'll be making")
+                //li(class="media")
+            div(class="form-group")
+                label How do you make the drink?
+                br
+                input(type="text" class="form-control" id="Recipe" name="Recipe" placeholder="for example - 1 part tequila, 2 parts rock n' roll!... But be serious plz...")
+                //li(class="media")
+            div(class="form-group")
+                label What's the most important thing about getting this drink right? (an ingredient, technique, etc.)
+                br
+                input(type="text" class="form-control" id="SecretIngredient" name="SecretIngredient" placeholder="Does the type of spirit make a difference? Specific techniques in preparation?")
+                //li(class="media")
+            div(class="form-group")
+                label What do people often get wrong about this drink?
+                br
+                input(type="text" class="form-control" id="DoNots" name="DoNots" placeholder="Perhaps a common recipe for the same drink that you think misses the mark")
+            
+                //li(class="media")
+            div(class="form-group")
+                label Why do you like this drink? Feel free to share a story...
+                br
+                input(type="text" class="form-control" id="DrinkStory" name="DrinkStory" placeholder="Something funny or personal, or perhaps the drink's history? Really a way for viewers to get to know you")
+                //li(class="media")
+            div(class="form-group")
+                label How shall we contact you if your selected?
+                br
+                input(type="text" class="form-control" id="ContactInfo" name="ContactInfo" placeholder="555-555-5555; myemail@mail.com; IG handle: @bonniebottles")        
+            
+                
+            
+                //li(class="media")
+            div(class="form-group")
+                input(type="submit" value="Submit")
+
+        p Email us at jakeolins@outlook.com with any other type of inquiry
 

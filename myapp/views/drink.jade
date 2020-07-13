@@ -4,25 +4,32 @@ block content
   //p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
   
   div(class="container-sm")
-    h1 
-      div(class="row justify-content-center") #{RecipeName}
-    p #{attachments, url} 
-      
-      //img(src="https://dl.airtable.com/.attachmentThumbnails/bdab1bced54701bace9f8fbd5cac1a5b/371f0d41", 
-          alt="Me", 
-          width="240",
-          height="320")
 
-    p 
-      div(class="row justify-content-center")
-        img(src="#{Attachments[0].url}"
+    ul(class="list-unstyled")
+      li(class="media")
+        div(class="media-body")
+          h3(class="mt-0 mb-1") #{RecipeName}
+          img(src="#{Attachments[0].url}"
           width="240",
           height="320"
           )
-
-    p 
-      div(class="row justify-content-center") <strong>Ingredients:</strong> #{RecipeReadable}
-    p 
-      div(class="row justify-content-center") <strong>Preparation:</strong> #{Preparation}
-    p 
-      div(class="row justify-content-center") <strong>Contributed By:</strong> <a href="/bartender/#{bartenderId}"><button type="button" class="btn btn-outline-primary">#{NameReadable}</button></a>
+      li(class="media")
+        div(class="media-body")
+          h5(class="mt-0 mb-1") Ingredients
+          p #{RecipeReadable}
+      li(class="media")
+        div(class="media-body")
+          h5(class="mt-0 mb-1") Preparation
+          p #{Preparation}
+      li(class="media")
+        div(class="media-body")
+          h5(class="mt-0 mb-1") Secret Ingredient
+          p #{SecretIngredient}
+      li(class="media")
+        div(class="media-body")
+          h5(class="mt-0 mb-1") Contributed By
+          a(href="/bartender/#{bartenderId}")
+            button(type="button" class="btn btn-outline-light") #{NameReadable}
+    
+    br
+    br

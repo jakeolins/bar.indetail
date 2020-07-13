@@ -44,14 +44,27 @@ async function listBartenders(){
     return staff;
 }
 
-async function submitApplication(applicantName, applicantBar, applicantDrink, applicantStory){
+async function submitApplication(Name, 
+    WhoAreYou,
+    Bar, 
+    Drink, 
+    Recipe,
+    SecretIngredient,
+    DoNots,
+    ContactInfo,
+    DrinkStory){
     const result = await drinksBase('Applications').create([
         {
           "fields": {
-              Name: applicantName,
-              Bar: applicantBar,
-              Drink: applicantDrink,
-              Story: applicantStory,
+              Name: Name,
+              WhoAreYou: WhoAreYou,
+              Bar: Bar,
+              Drink: Drink,
+              Recipe: Recipe,
+              SecretIngredient: SecretIngredient,
+              DoNots: DoNots,
+              ContactInfo: ContactInfo,
+              DrinkStory: DrinkStory,
           }
         },
       ]);

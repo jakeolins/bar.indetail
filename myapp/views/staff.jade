@@ -4,7 +4,9 @@ block content
     //p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
     
     br
-    h1 Staff
+    h2 
+        div(class="row justify-content-center" style="text-align: center") Staff
+        br
     div(class="container")
         div(class="row justify-content-around")
             each bartender in records
@@ -19,10 +21,12 @@ block content
                                 img(src="#{bartender.fields.Attachments[0].url}",
                                 class="card-img-top",
                                 alt="...")
-                                div(class="card-body row justify-content-start")
+                                div(class="card-body row justify-content-start text-dark")
+                                    br
                                     a(href="/bartender/#{bartender.fields.bartenderId}" class="btn btn-outline-dark btn-block stretched-link") #{bartender.fields.Name}
                                     //h5(class="card-title") #{bartender.fields.Name}
-                                    br
                                     p(class="card-text") #{bartender.fields.inDetailTake}    
                         
-                
+        br
+    br
+    br

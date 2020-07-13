@@ -25,8 +25,24 @@ async function listBartenders(){
     return staff;
 }
 
-async function submitApplication(applicantName, applicantBar, applicantDrink, applicantStory){
-    const result = await Airtable.submitApplication(applicantName, applicantBar, applicantDrink, applicantStory);
+async function submitApplication(Name, 
+    WhoAreYou,
+    Bar, 
+    Drink, 
+    Recipe,
+    SecretIngredient,
+    DoNots,
+    ContactInfo,
+    DrinkStory){
+    const result = await Airtable.submitApplication(Name, 
+        WhoAreYou,
+        Bar, 
+        Drink, 
+        Recipe,
+        SecretIngredient,
+        DoNots,
+        ContactInfo,
+        DrinkStory);
     return result;
 }
 

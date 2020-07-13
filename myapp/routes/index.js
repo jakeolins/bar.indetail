@@ -58,7 +58,15 @@ router.get('/apply', function(req, res, next) {
 
 router.post('/apply', async function(request, res, next) {
   console.dir(request.body)
-  await drinkController.submitApplication(request.body.applicantName, request.body.applicantBar, request.body.applicantDrink, request.body.applicantStory)
+  await drinkController.submitApplication(request.body.Name, 
+    request.body.WhoAreYou, 
+    request.body.Bar, 
+    request.body.Drink, 
+    request.body.Recipe, 
+    request.body.SecretIngredient, 
+    request.body.DoNots,
+    request.body.ContactInfo,
+    request.body.DrinkStory)
   res.render('apply', { title: 'Apply' });
 });
 

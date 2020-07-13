@@ -3,40 +3,48 @@ extends layout
 block content
   //p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
   
-  h1 Bartender: #{Name}
+  div(class="container-sm") 
+    
+    ul(class="list-unstyled")
+      li(class="media")
+        div(class="media-body")
+          h3(class="mt-0 mb-1") #{Name} 
+          img(src="#{Attachments[0].url}", 
+            alt="Me", 
+            width="240",
+            height="320")
+      li(class"media")
+        div(class="media-body")
+          h5(class="mt-0 mb-1") The inDetail Take
+          p #{inDetailTake} 
+      li(class"media")
+        div(class="media-body")
+          h5(class="mt-0 mb-1") Drink
+          a(href="/drinks/#{FavoriteDrinkId}")
+            button(type="button" class="btn btn-outline-light") #{FavoriteDrinkReadable}
+      li(class"media")
+        div(class="media-body")
+          br
+          iframe(width="560",
+            height="315",
+            src="https://www.youtube.com/embed/#{Video2}",
+            frameborder="0",
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+            allowfullscreen,
+          ) 
+      li(class"media")
+        div(class="media-body")
+          h5(class="mt-0 mb-1") Bar
+          p #{BarReadable} in #{Location}
+      li(class"media")
+        div(class="media-body")
+          h5(class="mt-0 mb-1") Favorite Story
+          p #{FavoriteStory}
+      li(class"media")
+        div(class="media-body")
+          h5(class="mt-0 mb-1") About Me
+          p #{WhoAreYou}
 
-  p <strong>The Drink:</strong> <a href="/drinks/#{FavoriteDrinkId}"><button type="button" class="btn btn-outline-primary">#{FavoriteDrinkReadable}</button></a>   
-
-  img(src="#{Attachments[0].url}", 
-    alt="Me", 
-    width="240",
-    height="320")
-  
-  p <strong>The inDetail Take:</strong> #{inDetailTake}
-  
-  
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/#{Video2}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-  p <strong>About me:</strong> #{WhoAreYou}
-
-  p <strong>Bar:</strong> #{BarReadable} in #{Location}
-  
-  p <strong>Favorite Story:</strong> #{FavoriteStory}
-
-  //p <strong>Recipes:</strong> #{DrinkSubmissionsReadable} 
-
-  //<a href="/drinks/#{FavoriteDrinkId}"><button type="button" class="btn btn-outline-primary">#{FavoriteDrinkReadable}</button></a>
-  
-  //<a href="/drinks/#{DrinkSubmissionsID[0]}"><button type="button" class="btn btn-outline-primary">Can't figure out how to show the drink name</button></a>
-
-
-
-  //p #{Notes}
-  //p Recipes: <button type="button" class="btn btn-outline-primary">#{Recipe1}</button>
-      <button type="button" class="btn btn-outline-primary">#{Recipe2}</button>
-      <button type="button" class="btn btn-outline-primary">#{Recipe3}</button>
-  //p #{Phone}
-  //p #{Options}
-  //p #{Dollars}
-  //p #{Email}
+    br
+    br
+    
