@@ -1,33 +1,17 @@
 {
-  "name": "thebarindetail",
-  "version": "1.0.0",
-  "main": "app.js",
-  "engines": {
-    "node": "12.x"
-  },
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node ./myapp/bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "Jacob Olins",
-  "license": "ISC",
   "dependencies": {
-    "app.js": "file:thebarindetail",
-    "nodemon": "^2.0.4",
-    "pug": "^2.0.4",
-    "save": "^2.4.0"
-  },
-  "devDependencies": {},
-  "description": "curated cocktails and step by step instructions from professional bartenders",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jakeolins/bar.indetail.git"
-  },
-  "keywords": [
-    "heroku"
-  ],
-  "bugs": {
-    "url": "https://github.com/jakeolins/bar.indetail/issues"
-  },
-  "homepage": "https://github.com/jakeolins/bar.indetail#readme"
+    "airtable": "^0.8.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  }
 }
