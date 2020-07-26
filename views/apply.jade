@@ -7,66 +7,77 @@ block content
 
         br
         h3 Apply 
+        
+        p(style="font-size: 150%") 
+            p From now until December 31st, 2020 we'll be adding a new bartender to our Staff every week.  
+            p To join, <strong>apply below</strong> and send a video of yourself making a cocktail to jakeolins@outlook.com
+            p If selected: 
+            ul
+                li <strong>You'll earn $50</strong>
+                li You'll be the Featured Bartender on this site, The Bar in Detail, and showcased on our Staff page
+                li We'll post your video on our IG and TikTok pages for additional exposure
+                li We'll do everything we can to help you get paying gigs like Zoom lessons and private events 
+            
         br
-        p To be a member of the Staff at The Bar in Detail submit your application below <strong>to earn $50</strong> and be featured here on The Bar In Detail, on our IG, YouTube and TikTok pages.
-        br
-        //<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAcoQWIpUNUpPRTVVNkRQTk5DSEVGSDQyQ1
         
         form(action="/apply" method="post")
             //ul(class="list-unstyled")
                 li(class="form-group")
             div(class="form-group")
                 label What's your name?
-                input(type="text" class="form-control" id="Name" name="Name" placeholder="First, Last & alias if you have one ;-)")
+                                //div(class="input-group")
+                                    div(class="input-group-prepend")
+                                        span(class="input-group-text")
+                br
+                textarea(type="text" class="form-control"  id="Name"  name="Name" placeholder="First, Last... & I guess alias if you have one" rows="3")
+                                
                     
 
                 //li(class="form-group")
             div(class="form-group")
                 label Who are you?
                 br
-                input(type="text" class="form-control" id="WhoAreYou" name="WhoAreYou" placeholder="Help us get to know you... Your personality, experience, specialties, passions, etc.")
+                textarea(type="text" class="form-control" id="WhoAreYou" name="WhoAreYou" placeholder="Help us get to know you... Your personality, experience, specialties, passions, etc." rows="3")
             
                 //li(class="media")
             div(class="form-group")
                 label Where do/ did you work?
                 br
-                input(type="text" class="form-control" id="Bar" name="Bar" placeholder="Name of the bar and location please")
+                textarea(type="text" class="form-control" id="Bar" name="Bar" placeholder="Name of the bar and location please" rows="3")
             
                 //li(class="media")
             div(class="form-group")
                 label What drink would you like to share?
                 br
-                input(type="text" class="form-control" id="Drink" name="Drink" placeholder="Name of drink you'll be making")
+                textarea(type="text" class="form-control" id="Drink" name="Drink" placeholder="Name of the drink you'll be making" rows="3")
+                
                 //li(class="media")
             div(class="form-group")
                 label How do you make the drink?
                 br
-                input(type="text" class="form-control" id="Recipe" name="Recipe" placeholder="for example - 1 part tequila, 2 parts rock n' roll!... But be serious plz...")
+                textarea(type="text" class="form-control" id="Recipe" name="Recipe" placeholder="for example - 1 part tequila, 2 parts rock n' roll!... But seriously... so the folks at home can give it a whirl" rows="3")
                 //li(class="media")
             div(class="form-group")
                 label What's the most important thing about getting this drink right? (an ingredient, technique, etc.)
                 br
-                input(type="text" class="form-control" id="SecretIngredient" name="SecretIngredient" placeholder="Does the type of spirit make a difference? Specific techniques in preparation?")
+                textarea(type="text" class="form-control" id="SecretIngredient" name="SecretIngredient" placeholder="Does the brand of spirit make a difference? Specific techniques in preparation?" rows="3")
                 //li(class="media")
             div(class="form-group")
                 label What do people often get wrong about this drink?
                 br
-                input(type="text" class="form-control" id="DoNots" name="DoNots" placeholder="Perhaps a common recipe for the same drink that you think misses the mark")
+                textarea(type="text" class="form-control" id="DoNots" name="DoNots" placeholder="Perhaps a common recipe for the same drink that you think misses the mark" rows="3")
             
                 //li(class="media")
             div(class="form-group")
                 label Why do you like this drink? Feel free to share a story...
                 br
-                input(type="text" class="form-control" id="DrinkStory" name="DrinkStory" placeholder="Something funny or personal, or perhaps the drink's history? Really a way for viewers to get to know you")
+                textarea(type="text" class="form-control" id="DrinkStory" name="DrinkStory" placeholder="Something funny or personal, or perhaps the drink's history? Really a way for viewers to get to know you" rows="3")
                 //li(class="media")
             div(class="form-group")
                 label How shall we contact you if your selected?
                 br
-                input(type="text" class="form-control" id="ContactInfo" name="ContactInfo" placeholder="555-555-5555; myemail@mail.com; IG handle: @bonniebottles")        
+                textarea(type="text" class="form-control" id="ContactInfo" name="ContactInfo" rows="3" placeholder="555-555-5555; email@mail.com; IG handle: @wellspriited")        
             
-                
-            
-                //li(class="media")
             div(class="form-group")
                 input(type="submit" value="Submit")
 
