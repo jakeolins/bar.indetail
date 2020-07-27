@@ -12,17 +12,18 @@ block content
                 //div(class="col")
                 each drink in records
                     ul(class="list-group list-group-horizontal-sm")
-                        li(class="list-group-item justify-content-center" style="margin-bottom:20px")
+                        li(class="list-group-item justify-content-center bg-light" style="margin-bottom:20px")
                             div(class="scrolling-wrapper")                
-                                div(class="card-lg" style="width: 18rem")
+                                div(class="card-lg bg-light" style="width: 18rem")
                                     img(src="#{drink.fields.Attachments[0].url}",
                                         class="card-img-top",
                                         alt="...")
-                                    div(class="card-body row justify-content-start text-dark")
+                                    div(class="card-body row justify-content-start text-dark bg-light")
                                         br
+                                        p(class="card-text") #{drink.fields.shortDescription}
                                         a(href="/drinks/#{drink.fields.drinkId}" 
                                             class="btn btn-outline-dark btn-block stretched-link") #{drink.fields.RecipeName}
-                                        p(class="card-text") #{drink.fields.shortDescription}
+                                        
 
 
 

@@ -12,19 +12,20 @@ block content
             //div(class="col")
             each bartender in records                 
                 ul(class="list-group list-group-horizontal-sm")
-                    li(class="list-group-item" style="margin-bottom:20px")
+                    li(class="list-group-item bg-light" style="margin-bottom:20px")
                         div(class="scrolling-wrapper") 
                             //div(class="col-sm-6 mb-4")
-                            div(class="card-lg" style="width: 18rem;")
+                            div(class="card-lg bg-light" style="width: 18rem;")
                                 img(src="#{bartender.fields.Attachments[0].url}",
                                     class="card-img-top",
                                     alt="...")
-                                div(class="card-body row justify-content-start text-dark")
+                                div(class="card-body row justify-content-start text-dark bg-light")
                                     br
+                                    p(class="card-text") #{bartender.fields.inDetailTake}
                                     a(href="/bartender/#{bartender.fields.bartenderId}" 
                                         class="btn btn-outline-dark btn-block stretched-link") #{bartender.fields.Name}
                                     //h5(class="card-title") #{bartender.fields.Name}
-                                    p(class="card-text") #{bartender.fields.inDetailTake}    
+                                        
                         
         br
     br
