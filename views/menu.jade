@@ -1,7 +1,6 @@
 extends layout
 
 block content
-    //p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
     
     br
     h2 
@@ -12,11 +11,21 @@ block content
         div(class="row justify-content-around")
                 //div(class="col")
                 each drink in records
-                    ul(class="list-group list-group-horizontal-sm justify-content-center")
-                        li(class="list-group-item" style="margin-bottom:20px")
+                    ul(class="list-group list-group-horizontal-sm")
+                        li(class="list-group-item justify-content-center" style="margin-bottom:20px")
                             div(class="scrolling-wrapper")                
-                                div(class="card-lg card-deck" style="width: 24rem")  
-                                    a(href="/drinks/#{drink.fields.drinkId}" class="btn btn-outline-dark btn-block stretched-link") #{drink.fields.RecipeName}
+                                div(class="card-lg" style="width: 18rem")
                                     img(src="#{drink.fields.Attachments[0].url}",
                                         class="card-img-top",
                                         alt="...")
+                                    div(class="card-body row justify-content-start text-dark")
+                                        br
+                                        a(href="/drinks/#{drink.fields.drinkId}" 
+                                            class="btn btn-outline-dark btn-block stretched-link") #{drink.fields.RecipeName}
+                                        p(class="card-text") #{drink.fields.shortDescription}
+
+
+
+                    
+                    //ul(class="list-group list-group-horizontal-sm justify-content-center")
+                    //div(class="card-lg card-deck"
