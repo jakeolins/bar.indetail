@@ -75,5 +75,14 @@ router.post('/apply', async function(request, res, next) {
   res.render('apply', { title: 'Apply' });
 });
 
+router.get('/askexpert', function(req, res, next) {
+  res.render('askexpert', { title: 'Ask' });
+});
+
+router.post('/askexpert', async function(request, res, next) {
+  console.dir(request.body)
+  await drinkController.askExpert(request.body.message)
+  res.render('askexpert', { title: 'Ask'});
+});
 
 module.exports = router;

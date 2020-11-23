@@ -46,9 +46,17 @@ async function submitApplication(Name,
     return result;
 }
 
+async function askExpert(messages){
+    const result = await Airtable.askExpert(messages);
+    return result;
+}
+
+async function listMessages(messages){
+    const result = await Airtable.listMessages()
+}
 
 
 module.exports ={
-    getBartender, getDrink, listDrinks, listBartenders, submitApplication,
+    getBartender, getDrink, listDrinks, listBartenders, submitApplication, askExpert,
 }
 

@@ -4,7 +4,7 @@ block content
     
     br
     h2 
-        div(class="row justify-content-center" style="text-align: center") Staff
+        //div(class="row justify-content-center" style="text-align: center") Staff
         br
 
     div(class="container")
@@ -12,14 +12,14 @@ block content
             //div(class="col")
             each bartender in records                 
                 ul(class="list-group list-group-horizontal-sm")
-                    li(class="list-group-item bg-light" style="margin-bottom:20px")
+                    li(class="list-group-item bg-dark" style="margin-bottom:20px")
                         div(class="scrolling-wrapper") 
                             //div(class="col-sm-6 mb-4")
-                            div(class="card-lg bg-light" style="width: 18rem;")
+                            div(class="card-lg bg-dark" style="width: 18rem;")
                                 img(src="#{bartender.fields.Attachments[0].url}",
                                     class="card-img-top",
                                     alt="...")
-                                div(class="card-body row justify-content-start text-dark bg-light")
+                                div(class="card-body row justify-content-start text-dark bg-dark")
                                     br
                                     p(class="card-text") #{bartender.fields.inDetailTake}
                                     a(href="/bartender/#{bartender.fields.bartenderId}" 

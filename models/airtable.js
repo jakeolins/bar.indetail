@@ -2,6 +2,7 @@ const Airtable = require("airtable")
 const airtableConfig = require("../config/airtable.json")
 const database = new Airtable({apiKey: airtableConfig.API_key})
 var drinksBase = database.base(airtableConfig.drinksBase);
+var messageBase = database.base(airtableConfig.messageBase);
 var bartenderBase = database.base(airtableConfig.bartenderBase);
 
 async function getDrink(id){
@@ -71,6 +72,20 @@ async function submitApplication(Name,
     return result 
 }
 
+async function askExpert(message){
+    const result = await messageBase('messages').create([
+        {
+            "fields": {
+                message: message,
+            }
+        },
+    ]);
+    return result
+}
+
+async function listMessages(message){
+    
+}
 
 // async function getDrinkByName(name){
 //     let drink=null
@@ -103,5 +118,5 @@ async function submitApplication(Name,
 //     });
 // }
 module.exports ={
-    getBartender, getDrink, listDrinks, listBartenders, submitApplication,
+    getBartender, getDrink, listDrinks, listBartenders, submitApplication, askExpert,
 }
