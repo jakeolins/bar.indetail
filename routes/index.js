@@ -61,6 +61,10 @@ router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About' });
 });
 
+router.get('/terms', function(req, res, next) {
+  res.render('terms', { title: 'Terms'});
+});
+
 router.post('/apply', async function(request, res, next) {
   console.dir(request.body)
   await drinkController.submitApplication(request.body.Name, 
