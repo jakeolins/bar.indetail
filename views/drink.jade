@@ -4,32 +4,30 @@ block content
   //p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
   br
   div(class="container-sm")
+    div(class="card-body row text-dark bg-light" style="font-size:150%")
 
-    ul(class="list-unstyled")
-      li(class="media")
-        div(class="media-body")
-          h3(class="mt-0 mb-1") #{RecipeName}
-          img(src="#{Attachments[0].url}"
-          width="240",
-          height="320"
-          )
-      li(class="media")
-        div(class="media-body")
-          h5(class="mt-0 mb-1") Ingredients
-          p #{RecipeReadable}
-      li(class="media")
-        div(class="media-body")
-          h5(class="mt-0 mb-1") Preparation
-          p #{Preparation}
-      li(class="media")
-        div(class="media-body")
-          h5(class="mt-0 mb-1") Secret Ingredient
-          p #{SecretIngredient}
-      li(class="media")
-        div(class="media-body")
-          h5(class="mt-0 mb-1") Contributed By
-          a(href="/bartender/#{bartenderId}")
-            button(type="button" class="btn btn-outline-light") #{NameReadable}
-    
-    br
-    br
+      ul(class="list-unstyled")
+        li(class="media")
+          div(class="media-body")
+            h3(class="mt-0 mb-1") #{RecipeName}
+            img(src="#{Attachments[0].url}"
+            width="240",
+            height="320"
+            )
+        li(class="media")
+          div(class="media-body")
+            h5(class="mt-0 mb-1") Ingredients
+            p #{RecipeReadable}
+        li(class="media")
+          div(class="media-body")
+            h5(class="mt-0 mb-1") Preparation
+            p #{Preparation}
+        li(class="media")
+          div(class="media-body")
+            h5(class="mt-0 mb-1") Secret Ingredient
+            p #{SecretIngredient}
+        //- li(class="media")
+        //-   div(class="media-body")
+        //-     h5(class="mt-0 mb-1") Contributed By
+        //-     a(href="/bartender/#{bartenderId}")
+        //-       button(type="button" class="btn btn-outline-light") #{NameReadable}

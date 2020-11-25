@@ -4,47 +4,46 @@ block content
   //p <a href="/home"><button type="button" class="btn btn-outline-primary">Home</button></a>
   br
   div(class="container-sm") 
+    div(class="card-body row text-dark bg-light" style="font-size:150%")
     
-    ul(class="list-unstyled")
-      li(class="media")
-        div(class="media-body")
-          h3(class="mt-0 mb-1") #{Name} 
-          img(src="#{Attachments[0].url}", 
-            alt="Me", 
-            width="240",
-            height="320")
-      li(class"media")
-        div(class="media-body")
-          h5(class="mt-0 mb-1") The inDetail Take
-          p #{inDetailTake} 
-      li(class"media")
-        div(class="media-body")
-          h5(class="mt-0 mb-1") Drink
-          a(href="/drinks/#{FavoriteDrinkId}")
-            button(type="button" class="btn btn-outline-light") #{FavoriteDrinkReadable}
-      li(class"media")
-        div(class="media-body")
-          br
-          iframe(width="560",
-            height="315",
-            src="https://www.youtube.com/embed/#{Video2}",
-            frameborder="0",
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-            allowfullscreen,
-          ) 
-      li(class"media")
-        div(class="media-body")
-          h5(class="mt-0 mb-1") Bar
-          p #{BarReadable} in #{Location}
-      li(class"media")
-        div(class="media-body")
-          h5(class="mt-0 mb-1") Cocktail Story
-          p #{FavoriteStory}
-      li(class"media")
-        div(class="media-body")
-          h5(class="mt-0 mb-1") About Me
-          p #{WhoAreYou}
+      ul(class="list-unstyled")
+        li(class="media")
+          div(class="media-body")
+            h3(class="mt-0 mb-1") #{Name} 
+            img(src="#{Attachments[0].url}", 
+              alt="Me", 
+              width="240",
+              height="320")
+        //- li(class"media")
+        //-   div(class="media-body")
+        //-     h5(class="mt-0 mb-1") The inDetail Take
+        //-     p #{inDetailTake} 
+        //- li(class"media")
+        //-   div(class="media-body")
+        //-     h5(class="mt-0 mb-1") Drink
+        //-     a(href="/drinks/#{FavoriteDrinkId}")
+        //-       button(type="button" class="btn btn-outline-light") #{FavoriteDrinkReadable}
+        //- li(class"media")
+        //-   div(class="media-body")
+        //-     br
+        //-     iframe(width="560",
+        //-       height="315",
+        //-       src="https://www.youtube.com/embed/#{Video2}",
+        //-       frameborder="0",
+        //-       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        //-       allowfullscreen,
+        //-     ) 
+        //- li(class"media")
+        //-   div(class="media-body")
+        //-     h5(class="mt-0 mb-1") Bar
+        //-     p #{BarReadable} in #{Location}
+        //- li(class"media")
+        //-   div(class="media-body")
+        //-     h5(class="mt-0 mb-1") Cocktail Story
+        //-     p #{FavoriteStory}
+        li(class"media")
+          div(class="media-body")
+            h5(class="mt-0 mb-1") About Me
+            p #{WhoAreYou}
 
-    br
-    br
     
